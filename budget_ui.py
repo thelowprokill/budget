@@ -11,6 +11,9 @@ class variable_input_widget(QtWidgets.QWidget):
         self.y = y
         super().__init__(*args, **kwargs)
         self.setupUi()
+        self.variable_input_type = "Rent"
+        self.amount_spent = 950
+        self.amount_budgeted = 950
 
     def setupUi(self):
         self.setObjectName("self")
@@ -53,11 +56,11 @@ class variable_input_widget(QtWidgets.QWidget):
         item = self.list_widget.insertItem(0, s)
 
     def retranslateUi(self):
-        self.setWindowTitle("Variable Input Type")
-        self.label_variable_input_type.setText("variable_input_type")
-        self.label_budgeted_amount.setText("budgeted")
-        self.label_total_spent.setText("spent")
-        self.label_remaining_balance.setText("remaining")
+        #self.setWindowTitle("Variable Input Type")
+        self.label_variable_input_type.setText(self.variable_input_type)
+        self.label_budgeted_amount.setText("Budgeted: {}".format(self.amount_budgeted))
+        self.label_total_spent.setText("Spent: {}".format(self.amount_spent))
+        self.label_remaining_balance.setText("Remaining {}".format(self.amount_spent - self.amount_budgeted))
         self.button_view.setText("View")
         self.button_add.setText("Add")
 
@@ -84,6 +87,7 @@ class MainWindow(QtWidgets.QMainWindow):
         text = ["Rent", "Groceries", "Car", "Misc", "House"]
         for (widget, t) in zip(self.widgets, text):
             widget.add_text(t)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
