@@ -1,9 +1,42 @@
-* Data
-** get data
-** send to ui
-** make ui dynamic based on data
-** add data
-* UI
-** make ui dynamic based on data
-** add ui for making config file
-** make add data screen
+* DONE Data
+  CLOSED: [2020-12-02 Wed 14:27]
+** DONE get data
+   CLOSED: [2020-12-02 Wed 14:26]
+** DONE send to ui
+   CLOSED: [2020-12-02 Wed 14:27]
+** DONE make ui dynamic based on data
+   CLOSED: [2020-12-02 Wed 14:27]
+** DONE add data
+   CLOSED: [2020-12-02 Wed 14:27]
+* TODO UI
+** DONE make ui dynamic based on data
+   CLOSED: [2020-12-02 Wed 14:27]
+** TODO add ui for making config file
+** DONE make enter submit entry
+   CLOSED: [2020-12-02 Wed 14:52]
+** DONE adding data clears comment and value fields
+   CLOSED: [2020-12-02 Wed 14:52]
+** DONE default date to today
+   CLOSED: [2020-12-02 Wed 14:52]
+* DONE Tables
+  CLOSED: [2020-12-02 Wed 14:27]
+** DONE variable_inputs = where all the expenses are stored, hit by individual sections 
+   CLOSED: [2020-12-02 Wed 14:27]
+*** layout:
+**** id int auto increment
+**** month int
+**** variable_input_id int
+**** comment varchar
+**** date date
+**** value decimal(12,2)
+** DONE variable_input_types = where all the different section names are stored, hit by root app
+   CLOSED: [2020-12-02 Wed 14:27]
+*** layout
+**** id int auto increment
+**** name varchar
+** DONE budget = where the budget is stored, hit by root
+   CLOSED: [2020-12-02 Wed 14:27]
+*** layout
+**** id int auto increment
+**** variable_input_id int
+**** value decimal(12,2)
