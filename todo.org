@@ -44,4 +44,5 @@
 ** TODO remove month value from table
 *** instead use month and year values to test if data is requested
 * TODO file structure
-** TODO Make each class it's own file
+** DONE Make each class it's own file
+   CLOSED: [2020-12-02 Wed 15:18]
