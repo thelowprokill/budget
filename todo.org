@@ -40,3 +40,5 @@
 **** id int auto increment
 **** variable_input_id int
 **** value decimal(12,2)
+* TODO file structure
+** TODO Make each class it's own file
