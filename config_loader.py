@@ -18,6 +18,13 @@ from os import path
 
 CONFIG_FILE = ".config"
 
+############################################
+#                                          #
+# class: config_storage                    #
+#                                          #
+# Purpose: data storage instance           #
+#                                          #
+############################################
 class config_storage:
     def __init__(self):
         self.mysql_host = '192.168.0.134'

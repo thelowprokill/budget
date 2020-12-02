@@ -1,0 +1,9 @@
+* Data
+** get data
+** send to ui
+** make ui dynamic based on data
+** add data
+* UI
+** make ui dynamic based on data
+** add ui for making config file
+** make add data screen
