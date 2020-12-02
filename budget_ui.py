@@ -4,7 +4,7 @@ from decimal import Decimal
 import connect       as conn
 import config_loader as cl
 import logwriter     as lw
-from datetime import datetime#, strptime
+from datetime import datetime
 
 class title_data:
     def __init__(self):
@@ -247,7 +247,6 @@ class variable_input_widget(QtWidgets.QWidget):
             self.add_entry()
 
     def add_text(self, c, d, a):
-        #datetime.now().date().strftime("%Y %b %d")
         item = self.comment_list_widget.insertItem(0, c)
         item = self.date_list_widget.insertItem(0, d.strftime('%Y %b %d'))
         item = self.amount_list_widget.insertItem(0, "${}".format(a))
