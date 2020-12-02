@@ -149,6 +149,10 @@ class variable_input_widget(QtWidgets.QWidget):
         self.date_text_add = QtWidgets.QLineEdit(self.verticalLayoutWidget)
         self.amount_text_add = QtWidgets.QLineEdit(self.verticalLayoutWidget)
 
+        self.comment_text_add.setFont(font)
+        self.date_text_add.setFont(font)
+        self.amount_text_add.setFont(font)
+
         self.date_text_add.setText(datetime.now().date().strftime("%Y %b %d"))
         self.add_h_layout = QtWidgets.QHBoxLayout()
         self.add_h_layout.setObjectName("v_layout_amount")
