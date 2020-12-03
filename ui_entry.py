@@ -17,7 +17,7 @@ class variable_input_widget(QtWidgets.QWidget):
         self.pull_data()
 
     def pull_data(self):
-        results = self.dh.pull(self.td.month, self.td.variable_input_id, False)
+        results = self.dh.pull(self.td.year, self.td.month, self.td.variable_input_id, False)
         for item in results:
             self.add_text(item[3], item[4], item[5])
 
@@ -58,7 +58,7 @@ class variable_input_widget(QtWidgets.QWidget):
         ##########################################
 
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(int(self.config.font_size))
         self.list_layout = QtWidgets.QHBoxLayout()
         self.list_layout.setObjectName("list_layout")
         self.list_layout.setContentsMargins(0,0,0,0)
@@ -254,5 +254,5 @@ class variable_input_widget(QtWidgets.QWidget):
 
     def commit(self):
         for e in self.cue:
-            self.dh.push(self.td.month, self.td.variable_input_id, e.c, e.d, e.a)
+            self.dh.push(self.td.variable_input_id, e.c, e.d, e.a)
 

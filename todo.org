@@ -43,6 +43,7 @@
 **** value decimal(12,2)
 ** TODO remove month value from table
 *** instead use month and year values to test if data is requested
-* TODO file structure
+* DONE file structure
+  CLOSED: [2020-12-02 Wed 21:13]
 ** DONE Make each class it's own file
    CLOSED: [2020-12-02 Wed 15:18]

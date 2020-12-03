@@ -68,7 +68,7 @@ class config_loader:
         # init default values
         self.defaults = config_storage()
         self.val      = config_storage()
-        self.read()
+        #self.read()
 
     ############################################
     #                                          #
@@ -84,25 +84,25 @@ class config_loader:
     #   none:                                  #
     #                                          #
     ############################################
-    def write(self):
-        self.message(0, "config file failed to load. Making new one.")
+    def write(self, new_config):
+        self.message(1, "Writing config file")
         config = open(CONFIG_FILE, "w+")
         # write new file
         # make form for new file
-        config.write("mysql_host  =" + self.defaults.mysql_host  + "\n")
-        config.write("mysql_port  =" + self.defaults.mysql_port  + "\n")
-        config.write("mysql_user  =" + self.defaults.mysql_user  + "\n")
-        config.write("mysql_pass  =" + self.defaults.mysql_pass  + "\n")
-        config.write("mysql_data  =" + self.defaults.mysql_data  + "\n")
-        config.write("win_title   =" + self.defautls.win_title   + "\n")
-        config.write("win_width   =" + self.defautls.win_width   + "\n")
-        config.write("win_height  =" + self.defautls.win_height  + "\n")
-        config.write("cell_width  =" + self.defautls.cell_width  + "\n")
-        config.write("cell_height =" + self.defautls.cell_height + "\n")
-        config.write("font_size   =" + self.defautls.font_size   + "\n")
+        config.write("mysql_host  =" + new_config.mysql_host  + "\n")
+        config.write("mysql_port  =" + new_config.mysql_port  + "\n")
+        config.write("mysql_user  =" + new_config.mysql_user  + "\n")
+        config.write("mysql_pass  =" + new_config.mysql_pass  + "\n")
+        config.write("mysql_data  =" + new_config.mysql_data  + "\n")
+        config.write("win_title   =" + new_config.win_title   + "\n")
+        config.write("win_width   =" + new_config.win_width   + "\n")
+        config.write("win_height  =" + new_config.win_height  + "\n")
+        config.write("cell_width  =" + new_config.cell_width  + "\n")
+        config.write("cell_height =" + new_config.cell_height + "\n")
+        config.write("font_size   =" + new_config.font_size   + "\n")
         config.close()
         self.message(0, "Successfully created new config file.")
-        self.read()
+        return self.read()
 
     ############################################
     #                                          #
@@ -142,18 +142,21 @@ class config_loader:
             self.val.mysql_pass  = mysql_pass
             self.val.mysql_data  = mysql_data
             self.val.win_title   = win_title
-            self.val.win_widht   = win_width
+            self.val.win_width   = win_width
             self.val.win_height  = win_height
-            self.val.cell_widht  = cell_width
+            self.val.cell_width  = cell_width
             self.val.cell_height = cell_height
             self.val.font_size   = font_size
             self.message(1, "Successfully read config file.")
+            return True
+
         except:
             try:
                 config.close()
             except:
                 pass
-            self.write()
+            return False
+
 
 
     ############################################
