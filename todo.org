@@ -1,4 +1,5 @@
-* TODO Data
+* DONE Data
+  CLOSED: [2020-12-03 Thu 15:00]
 ** DONE get data
    CLOSED: [2020-12-02 Wed 14:26]
 ** DONE send to ui
@@ -7,20 +8,23 @@
    CLOSED: [2020-12-02 Wed 14:27]
 ** DONE add data
    CLOSED: [2020-12-02 Wed 14:27]
-** TODO make month selector
-* TODO UI
+** DONE make month selector
+   CLOSED: [2020-12-03 Thu 15:00]
+* DONE UI
+  CLOSED: [2020-12-03 Thu 15:00]
 ** DONE make ui dynamic based on data
    CLOSED: [2020-12-02 Wed 14:27]
-** TODO add ui for making config file
+** DONE add ui for making config file
+   CLOSED: [2020-12-03 Thu 15:00]
 ** DONE make enter submit entry
    CLOSED: [2020-12-02 Wed 14:52]
 ** DONE adding data clears comment and value fields
    CLOSED: [2020-12-02 Wed 14:52]
 ** DONE default date to today
    CLOSED: [2020-12-02 Wed 14:52]
-** TODO choose month and year to work with. Default to current
-* DONE Tables
-  CLOSED: [2020-12-02 Wed 14:27]
+** DONE choose month and year to work with. Default to current
+   CLOSED: [2020-12-03 Thu 15:00]
+* TODO Tables
 ** DONE variable_inputs = where all the expenses are stored, hit by individual sections 
    CLOSED: [2020-12-02 Wed 14:27]
 *** layout:
@@ -47,3 +51,8 @@
   CLOSED: [2020-12-02 Wed 21:13]
 ** DONE Make each class it's own file
    CLOSED: [2020-12-02 Wed 15:18]
+** Make each section its own directory
+*** ie:
+**** ui
+**** app
+
