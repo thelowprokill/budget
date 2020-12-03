@@ -88,7 +88,7 @@ class config_window(QtWidgets.QMainWindow):
 
         self.sql_pass_text = QtWidgets.QLabel()
         self.sql_pass_line_edit = QtWidgets.QLineEdit()
-        self.sql_pass_line_edit.setEchoMode(QLineEdit.Password)
+        self.sql_pass_line_edit.setEchoMode(QtWidgets.QLineEdit.Password)
 
         self.h_layout_sql_pass = QtWidgets.QHBoxLayout()
         self.h_layout_sql_pass.addWidget(self.sql_pass_text)
