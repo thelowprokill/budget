@@ -10,8 +10,7 @@
    CLOSED: [2020-12-02 Wed 14:27]
 ** DONE make month selector
    CLOSED: [2020-12-03 Thu 15:00]
-* DONE UI
-  CLOSED: [2020-12-03 Thu 15:00]
+* TODO UI
 ** DONE make ui dynamic based on data
    CLOSED: [2020-12-02 Wed 14:27]
 ** DONE add ui for making config file
@@ -24,6 +23,13 @@
    CLOSED: [2020-12-02 Wed 14:52]
 ** DONE choose month and year to work with. Default to current
    CLOSED: [2020-12-03 Thu 15:00]
+** TODO configurable colours
+*** background:
+**** maybe image
+*** text_background:
+*** text
+*** button
+*** button_text
 * TODO Tables
 ** DONE variable_inputs = where all the expenses are stored, hit by individual sections 
    CLOSED: [2020-12-02 Wed 14:27]
