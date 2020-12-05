@@ -1,5 +1,8 @@
 * DONE Data
   CLOSED: [2020-12-03 Thu 15:00]
+  :PROPERTIES:
+  :ID:       d165b75e-2298-4e61-82d4-a8bd2089d01f
+  :END:
 ** DONE get data
    CLOSED: [2020-12-02 Wed 14:26]
 ** DONE send to ui
@@ -30,6 +33,7 @@
 *** text
 *** button
 *** button_text
+** TODO bible verse.
 * TODO Tables
 ** DONE variable_inputs = where all the expenses are stored, hit by individual sections 
    CLOSED: [2020-12-02 Wed 14:27]
