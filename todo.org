@@ -34,6 +34,7 @@
 *** button
 *** button_text
 ** TODO bible verse.
+** TODO log at bottom of screen
 * TODO Tables
 ** DONE variable_inputs = where all the expenses are stored, hit by individual sections 
    CLOSED: [2020-12-02 Wed 14:27]

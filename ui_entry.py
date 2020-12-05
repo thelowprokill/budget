@@ -230,7 +230,7 @@ class variable_input_widget(QtWidgets.QWidget):
         ##########################################
 
     def keyPressEvent(self, event):
-        if event.key() == QtCore.Qt.Key_Return:
+        if event.key() == QtCore.Qt.Key_Return or event.key() == QtCore.Qt.Key_Enter:
             self.add_entry()
 
     def add_text(self, c, d, a):

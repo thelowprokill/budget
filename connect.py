@@ -8,7 +8,7 @@ class data_handler:
         self.config = config
         self.connected = False
         try:
-            self.connection = connect(host=config.mysql_host, port=config.mysql_port, database=config.mysql_data, user=config.mysql_user, password=config.mysql_pass)
+            self.connection = connect(host=config.mysql_host, port=config.mysql_port, database=config.mysql_data, user=config.mysql_user, password=config.mysql_pass, auth_plugin='mysql_native_password')
             self.message(2, "Connection Established")
             self.connected = True
         except:
