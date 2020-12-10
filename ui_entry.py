@@ -21,6 +21,14 @@ class variable_input_widget(QtWidgets.QWidget):
         for item in results:
             self.add_text(item[3], item[4], item[5])
 
+    def refresh(self):
+        self.td.spent = 0
+
+        self.comment_list_widget.clear()
+        self.date_list_widget.clear()
+        self.amount_list_widget.clear()
+        self.pull_data()
+
     def setupUi(self):
         self.setObjectName("self")
         self.setStyleSheet('self { border: 1px solid black; }')
@@ -233,8 +241,11 @@ class variable_input_widget(QtWidgets.QWidget):
         if event.key() == QtCore.Qt.Key_Return or event.key() == QtCore.Qt.Key_Enter:
             self.add_entry()
 
-    def add_text(self, c, d, a):
-        item = self.comment_list_widget.insertItem(0, c)
+    def add_text(self, c, d, a, who = True):
+        if who:
+            item = self.comment_list_widget.insertItem(0, c)
+        else:
+            item = self.comment_list_widget.insertItem(0, "n-" + c)
         item = self.date_list_widget.insertItem(0, d.strftime('%Y %b %d'))
         item = self.amount_list_widget.insertItem(0, "${}".format(a))
         self.td.spent = self.td.spent + a
@@ -248,11 +259,13 @@ class variable_input_widget(QtWidgets.QWidget):
         e.a = Decimal(self.amount_text_add.text())
         self.comment_text_add.setText("")
         self.amount_text_add.setText("")
-        self.add_text(e.c, e.d, e.a)
+        self.add_text(e.c, e.d, e.a, False)
         self.cue.append(e)
         self.comment_text_add.setFocus()
 
     def commit(self):
         for e in self.cue:
             self.dh.push(self.td.variable_input_id, e.c, e.d, e.a)
+        self.cue = []
+        self.refresh()
 
